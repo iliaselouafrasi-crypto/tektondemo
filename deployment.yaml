@@ -17,6 +17,6 @@ spec:
       containers:
       - name: webserver
         # Hier kijkt hij in het project 'tektondemo' naar jouw gebouwde image
-        image: image-registry.openshift-image-registry.svc:5000/tektondemo/tektondemo-git:latest
+        image: image: image-registry.openshift-image-registry.svc:5000/demotekton/tektondemo-git:latest
         ports:
         - containerPort: 8080
