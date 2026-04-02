@@ -1,0 +1,8 @@
+---
+- name: Stuur een notificatie
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Print bericht in de logs
+      debug:
+        msg: "SUCCESS: De applicatie in project demotekton is succesvol gebouwd!"
