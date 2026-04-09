@@ -1,10 +1,10 @@
+# Gebruik een publieke Red Hat image (geen intern adres nodig)
+FROM registry.access.redhat.com/ubi8/nginx-120:latest
 
-FROM image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.20-ubi8
+# In deze specifieke image staat de website content in deze map:
+COPY index.html /opt/app-root/src/index.html
 
-# Kopieer je index.html naar de juiste map van de webserver
-COPY index.html /usr/share/nginx/html/index.html
-
-# OpenShift Nginx gebruikt standaard poort 8080
+# OpenShift Nginx gebruikt poort 8080 voor veiligheid
 EXPOSE 8080
 
-# De webserver start automatisch
+# De server start automatisch
